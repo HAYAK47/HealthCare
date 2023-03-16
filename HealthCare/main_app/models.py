@@ -41,3 +41,9 @@ class Doctor (models.Model):
     )
     profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
     description = models.TextField(max_length=5000)
+
+class appointment (models.Model):
+    start_time:models.TimeField()
+    end_time:models.TimeField()
+    doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE)
+    patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
