@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'HealthCare.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'f6iimali/HealthCare',
         'USER': 'f6iimali',
         'PASSWORD': 'v2_42BW6_p4kuYNGKq8xt7d2izXgE7yE',
