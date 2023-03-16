@@ -13,6 +13,17 @@ class Department(models.Model):
         return self.name
     
 
+SHIFTS = (
+    ('1', 'Early Morning'),
+    ('2', 'Late Morning'),
+    ('3', 'Evening'),
+)
+
+class Profile (models.Model):
+    user_role = models.CharField(max_length=100)
+    mobile_Number = models.CharField(max_length=50)
+    image = models.ImageField(upload_to='main_app/static/images/users',default='') 
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
 class Patient (models.Model):
     blood = models.CharField(max_length=100)
